@@ -1,0 +1,48 @@
+server:
+  port: 8080
+  servlet:
+    encoding:
+      charset: UTF-8
+      force: true
+      enabled: true
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/sales?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8&allowPublicKeyRetrieval=true
+    username: root
+    password: 1234
+  mvc:
+    pathmatch:
+      matching-strategy: ant_path_matcher
+
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+    map-underscore-to-camel-case: true
+  type-aliases-package: com.slxy.entity
+  mapper-locations: classpath*:mapper/*.xml
+
+logging:
+  level:
+    root: INFO
+    com.slxy: DEBUG
+    org.springframework.web: DEBUG
+    org.springframework.security: DEBUG
+    org.springframework.jdbc: DEBUG
+    com.slxy.mapper: DEBUG
+
+# 文件上传配置
+upload:
+  # 上传路径（相对路径，相对于后端运行的工作目录）
+  path: upload/
+  # 访问路径前缀
+  prefix: /upload/
+  # 允许的文件类型
+  allowed-types: image/jpeg,image/png,image/gif
+  # 最大文件大小（单位：MB）
+  max-size: 5 
+
+jwt:
+  secret: sales-analysis-system-jwt-secret-key-2024-secure-token-with-sufficient-length-for-hs512-algorithm
+  expiration: 86400000  # 24小时

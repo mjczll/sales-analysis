@@ -1,0 +1,38 @@
+// ============================================================
+// 设计系统变量 —— 企业级销售业绩分析系统
+// 设计风格：Modern Enterprise Dashboard / 浅色专业 SaaS
+// 参考：FRONTEND_DESIGN_PLAN.md
+// ============================================================
+
+// 主色
+$brand-primary: #2563EB; // 品牌蓝
+$brand-primary-dark: #1D4ED8; // 深蓝（hover/强调）
+$brand-primary-light: #EFF6FF; // 浅蓝（选中背景/提示）
+
+// 中性色
+$bg-page: #F5F7FA; // 页面背景
+$bg-card: #FFFFFF; // 卡片/表格/弹窗
+$text-primary: #1E293B; // 主文字
+$text-secondary: #64748B; // 次级文字
+$text-weak: #94A3B8; // 弱化文字
+$border-color: #E2E8F0; // 分割线/边框
+
+// 状态色（全局统一）
+$color-success: #16A34A; // 已完成/正常
+$color-warning: #F59E0B; // 待审核/库存预警
+$color-danger: #EF4444; // 已取消/异常
+$color-info: #3B82F6; // 已发货/普通提示
+
+// 布局尺寸
+$sidebar-width: 220px;
+$sidebar-width-collapsed: 64px;
+$header-height: 64px;
+
+// 圆角
+$radius-card: 12px;
+$radius-control: 8px;
+$radius-dialog: 12px;
+
+// 间距
+$space-page: 24px;
+$space-block: 20px;
